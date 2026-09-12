@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: $z-background;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/dnd-valley.png');
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.05);
+}
+
+// Darkening layer keeps text readable and enforces the dark theme mood.
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 5, 5, 0.55) 0%,
+    rgba(6, 5, 5, 0.7) 45%,
+    rgba(6, 5, 5, 0.92) 100%
+  );
+}
+
+// Soft radial vignette to focus the center.
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 90% at 50% 20%,
+    transparent 0%,
+    rgba(6, 5, 5, 0.65) 100%
+  );
+}

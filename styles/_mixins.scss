@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+// Media query helpers. Usage: @include up($bp-md) { ... }
+@mixin up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin down($breakpoint) {
+  @media (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+// Frosted "arcane glass" panel used across cards, header and mobile menu.
+@mixin arcane-glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+// Accessible focus ring in the gold accent color.
+@mixin focus-ring {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
