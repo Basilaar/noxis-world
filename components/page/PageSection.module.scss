@@ -1,0 +1,51 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.section {
+  animation: rise 0.5s ease both;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  margin-bottom: 28px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  @include arcane-glass;
+  border-radius: 16px;
+  padding: clamp(20px, 4vw, 36px);
+  box-shadow: var(--shadow);
+
+  p {
+    color: var(--text);
+
+    & + p {
+      margin-top: 18px;
+    }
+  }
+
+  p:last-child {
+    color: var(--text-muted);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

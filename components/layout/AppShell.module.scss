@@ -1,0 +1,23 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.shell {
+  position: relative;
+  z-index: $z-content;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 72px) clamp(20px, 5vw, 40px);
+
+  // Leave room for the floating burger + bottom sheet on mobile.
+  @include down($bp-md) {
+    padding-bottom: 110px;
+  }
+}

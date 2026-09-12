@@ -1,48 +1,46 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import './globals.css'
+import { Cinzel, Inter } from 'next/font/google'
+import { AppShell } from '@/components/layout/AppShell'
+import './globals.scss'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-cinzel',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: {
+    default: 'Noxis World — Enter a New Realm',
+    template: '%s — Noxis World',
   },
+  description:
+    'A D&D-themed application template built with Next.js App Router, React 19 and modular SCSS.',
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  themeColor: '#0b0a09',
+  colorScheme: 'dark',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
+      <body>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   )

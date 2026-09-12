@@ -1,0 +1,21 @@
+// Design tokens for the D&D dark theme.
+// SCSS variables used for build-time logic (breakpoints, layout sizes).
+// Runtime themeable values live as CSS custom properties in globals.scss.
+
+// Breakpoints (mobile-first)
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// Layout
+$content-max-width: 860px;
+$header-height: 72px;
+$mobile-menu-radius: 20px;
+
+// z-index scale
+$z-background: 0;
+$z-content: 1;
+$z-header: 40;
+$z-mobile-menu: 60;
+$z-mobile-toggle: 70;
