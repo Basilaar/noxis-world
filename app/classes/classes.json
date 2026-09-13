@@ -1,0 +1,63 @@
+{
+    "data": [ {
+        "id": "Bard",
+        "title": "Бард",
+        "subTitle": "Bard",
+        "imageSrc": "/"
+    },{
+        "id": "Barbarian",
+        "title": "Варвар",
+        "subTitle": "Barbarian",
+        "imageSrc": "/"
+    }, {
+        "id": "Warrior",
+        "title": "Воин",
+        "subTitle": "Warrior",
+        "imageSrc": "/"
+    }, {
+        "id": "Druid",
+        "title": "Друид",
+        "subTitle": "Druid",
+        "imageSrc": "/"
+    }, {
+        "id": "Sorcerer",
+        "title": "Чародей",
+        "subTitle": "Sorcerer",
+        "imageSrc": "/"
+    }, {
+        "id": "Paladin",
+        "title": "Паладин",
+        "subTitle": "Paladin",
+        "imageSrc": "/"
+    }, {
+        "id": "Ranger",
+        "title": "Следопыт",
+        "subTitle": "Ranger",
+        "imageSrc": "/"
+    }, {
+        "id": "Rogue",
+        "title": "Плут",
+        "subTitle": "Rogue",
+        "imageSrc": "/"
+    }, {
+        "id": "Warlock",
+        "title": "Колдун",
+        "subTitle": "Warlock",
+        "imageSrc": "/"
+    }, {
+        "id": "Wizard",
+        "title": "Волшебник",
+        "subTitle": "Wizard",
+        "imageSrc": "/"
+    }, {
+        "id": "Cleric",
+        "title": "Жрец",
+        "subTitle": "Cleric",
+        "imageSrc": "/"
+    }, {
+        "id": "Monk",
+        "title": "Монах",
+        "subTitle": "Monk",
+        "imageSrc": "/"
+    }]
+}

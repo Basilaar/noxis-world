@@ -1,17 +1,16 @@
 import type { ReactNode } from 'react'
-import styles from './PageSection.module.scss'
 
-type PageSectionProps = {
-  eyebrow: string
+import styles from './simplePage.module.scss'
+
+type SimplePageProps = {
   title: string
   children: ReactNode
 }
 
 // Reusable page layout: an eyebrow label, a display title and a content card.
-export function PageSection({ eyebrow, title, children }: PageSectionProps) {
+export function SimplePage({ title, children }: SimplePageProps) {
   return (
     <article className={styles.section}>
-      <p className={styles.eyebrow}>{eyebrow}</p>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.card}>{children}</div>
     </article>
