@@ -1,4 +1,4 @@
-import styles from './Background.module.scss'
+import styles from './background.module.scss'
 
 // Fixed, decorative D&D valley backdrop shared by every page.
 export function Background() {

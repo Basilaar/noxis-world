@@ -1,1 +1,1 @@
-export * from './ClassCard'
+export * from './class-card'

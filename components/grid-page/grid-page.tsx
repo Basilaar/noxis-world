@@ -1,18 +1,17 @@
 import type { ReactNode } from 'react'
+import styles from './grid-page.module.scss'
 
-import styles from './simplePage.module.scss'
-
-type SimplePageProps = {
+type GridPageProps = {
   title: string
   children: ReactNode
 }
 
 // Reusable page layout: an eyebrow label, a display title and a content card.
-export function SimplePage({ title, children }: SimplePageProps) {
+export function GridPage({ title, children }: GridPageProps) {
   return (
     <article className={styles.section}>
       <h1 className={styles.title}>{title}</h1>
-      <div className={styles.card}>{children}</div>
+      <div className={styles.grid}>{children}</div>
     </article>
   )
 }

@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
-import { Background } from './Background'
-import { Navbar } from './Navbar'
-import { MobileNav } from './MobileNav'
-import styles from './AppShell.module.scss'
+import { Background } from './background'
+import { Navbar } from './navbar'
+import { MobileNav } from './mobile-nav'
+import styles from './app-shell.module.scss'
 
 // App-wide chrome: background, desktop navbar, page slot and mobile nav.
 export function AppShell({ children }: { children: ReactNode }) {

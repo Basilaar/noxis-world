@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { NAV_ITEMS } from '@/lib/navigation'
-import styles from './Navbar.module.scss'
+import styles from './navbar.module.scss'
 
 // Desktop / tablet top navigation. Hidden on mobile (see MobileNav).
 export function Navbar() {

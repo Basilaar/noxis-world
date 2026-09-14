@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { NAV_ITEMS } from '@/lib/navigation'
-import styles from './MobileNav.module.scss'
+import styles from './mobile-nav.module.scss'
 
 // Mobile-only navigation:
 // - a floating burger toggle pinned to the bottom-right

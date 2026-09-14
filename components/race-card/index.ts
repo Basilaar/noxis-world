@@ -1,1 +1,1 @@
-export * from './RaceCard'
+export * from './race-card'

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { ClassDtm } from '@/models'
 
-import styles from './ClassCard.module.scss'
+import styles from './class-card.module.scss'
 
 type ClassCardProps = {
   classData: ClassDtm

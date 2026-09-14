@@ -1,1 +1,1 @@
-export { ClassesList } from './ClassesList'
+export { ClassesList } from './classes-list'

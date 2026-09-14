@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Cinzel, Inter } from 'next/font/google'
-import { AppShell } from '@/components/layout/AppShell'
+import { AppShell } from '@/components/layout/app-shell'
 import './globals.scss'
 
 const inter = Inter({

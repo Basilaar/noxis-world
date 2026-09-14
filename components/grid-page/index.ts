@@ -1,1 +1,1 @@
-export * from './GridPage'
+export * from './grid-page'

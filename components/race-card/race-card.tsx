@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { RaceDtm } from '@/models'
 
-import styles from './RaceCard.module.scss'
+import styles from './race-card.module.scss'
 
 type RaceCardProps = {
   raceData: RaceDtm

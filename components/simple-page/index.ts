@@ -1,1 +1,1 @@
-export * from './simplePage'
+export * from './simple-page'
