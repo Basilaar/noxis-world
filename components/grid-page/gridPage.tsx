@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import styles from './gridPage.module.scss'
+import styles from './GridPage.module.scss'
 
 type GridPageProps = {
   title: string
@@ -7,7 +7,7 @@ type GridPageProps = {
 }
 
 // Reusable page layout: an eyebrow label, a display title and a content card.
-export function GridPage({ eyebrow, title, children }: GridPageProps) {
+export function GridPage({ title, children }: GridPageProps) {
   return (
     <article className={styles.section}>
       <h1 className={styles.title}>{title}</h1>

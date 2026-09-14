@@ -1,9 +1,5 @@
-import type { RacesStore, Race } from './races.store'
+import type { RaceDtm } from '@/models'
 
-export const selectRaces = (state: RacesStore): Race[] => state.races
+import type { RacesStore } from './races.store'
 
-export const selectSelectedRaceId = (state: RacesStore): string | null =>
-  state.selectedRaceId
-
-export const selectSelectedRace = (state: RacesStore): Race | undefined =>
-  state.races.find((r) => r.id === state.selectedRaceId)
+export const selectRaces = (state: RacesStore): RaceDtm[] => state.races

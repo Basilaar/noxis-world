@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+  @include arcane-glass;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 8px;
+
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: var(--shadow);
+
+  animation: rise 0.4s ease both;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  @include up($bp-sm) {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--accent);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+
+  @include up($bp-sm) {
+    width: 100px;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--accent-strong);
+  letter-spacing: 0.03em;
+
+  // Prevent overflow on long titles
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+
+  // Clamp to 3 lines max
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,30 +1,27 @@
 import { create } from 'zustand'
 
-import type { RaceDtm } from '@/models'
+import { ClassDtm } from '@/models'
 
-import racesDataJson from './races.json'
+import classesDataJson from './classes.json'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-type RacesState = {
-  races: RaceDtm[]
-  selectedRaceId: string | null
+type ClassesState = {
+  classes: ClassDtm[]
 }
 
-type RacesActions = {
-  fetchRaces: () => Promise<void>
+type ClassesActions = {
+  fetchClasses: () => Promise<void>
 }
 
-export type RacesStore = RacesState & RacesActions
-
+export type ClassesStore = ClassesState & ClassesActions
 
 // ─── Store ───────────────────────────────────────────────────────────────────
 
-export const useRacesStore = create<RacesStore>((set) => ({
-  races: [],
-  selectedRaceId: null,
+export const useClassesStore = create<ClassesStore>((set) => ({
+  classes: [],
 
-  fetchRaces: async () => {
-    set({races: racesDataJson.data})
+  fetchClasses: async () => {
+    set({classes: classesDataJson.data})
   }
 }))

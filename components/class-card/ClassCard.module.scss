@@ -8,7 +8,6 @@
   flex-direction: row;
   align-items: stretch;
   gap: 8px;
-  width: 100%;
 
   border-radius: 16px;
   padding: 8px;
@@ -20,7 +19,6 @@
   @include up($bp-sm) {
     gap: 16px;
     padding: 16px;
-    width: 390px;
   }
 
   &:hover {

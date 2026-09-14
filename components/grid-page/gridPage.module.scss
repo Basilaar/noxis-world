@@ -21,8 +21,13 @@
 }
 
 .grid {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @include up($bp-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @keyframes rise {
