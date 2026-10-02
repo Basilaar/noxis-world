@@ -68,12 +68,25 @@ export function RaceDetail({
             <Image
               src={imageSrc}
               alt={imageAlt || name}
-              fill
+              width={600}
+              height={800}
               sizes="(max-width: 768px) 100vw, 320px"
               priority
               className={styles.image}
             />
           </div>
+
+          {galleryUrl && (
+            <a
+              href={galleryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.galleryButton}
+            >
+              <span>Галерея референсов</span>
+              <ExternalLink size={15} />
+            </a>
+          )}
         </div>
 
         <div className={styles.contentSection}>
@@ -142,20 +155,6 @@ export function RaceDetail({
                 ))}
               </div>
             </section>
-          )}
-
-          {galleryUrl && (
-            <div className={styles.actions}>
-              <a
-                href={galleryUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.galleryButton}
-              >
-                <span>Галерея референсов</span>
-                <ExternalLink size={15} />
-              </a>
-            </div>
           )}
         </div>
       </div>
