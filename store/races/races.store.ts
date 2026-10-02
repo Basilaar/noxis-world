@@ -25,6 +25,7 @@ export const useRacesStore = create<RacesStore>((set) => ({
 
   fetchRaces: async () => {
     const raceResponse = await getRacesListClient()
+    // TODO: добавить обработку ошибки
 
     set({ races: raceResponse })
   },

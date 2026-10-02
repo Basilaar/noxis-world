@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": "artificer",
+      "imageSrc": "/images/classes/artificer.jpg",
+      "name": "Артефактор"
+    },
+    {
+      "id": "bard",
+      "imageSrc": "/images/classes/bard.jpg",
+      "name": "Бард"
+    },
+    {
+      "id": "barbarian",
+      "imageSrc": "/images/classes/barbarian.jpg",
+      "name": "Варвар"
+    },
+    {
+      "id": "fighter",
+      "imageSrc": "/images/classes/fighter.jpg",
+      "name": "Воин"
+    },
+    {
+      "id": "wizard",
+      "imageSrc": "/images/classes/wizard.jpg",
+      "name": "Волшебник"
+    },
+    {
+      "id": "juggernaut",
+      "imageSrc": "/images/classes/juggernaut.jpg",
+      "name": "Джаггернаут"
+    },
+    {
+      "id": "druid",
+      "imageSrc": "/images/classes/druid.jpg",
+      "name": "Друид"
+    },
+    {
+      "id": "cleric",
+      "imageSrc": "/images/classes/cleric.jpg",
+      "name": "Жрец"
+    },
+    {
+      "id": "warlock",
+      "imageSrc": "/images/classes/warlock.jpg",
+      "name": "Колдун"
+    },
+    {
+      "id": "monk",
+      "imageSrc": "/images/classes/monk.jpg",
+      "name": "Монах"
+    },
+    {
+      "id": "paladin",
+      "imageSrc": "/images/classes/paladin.jpg",
+      "name": "Паладин"
+    },
+    {
+      "id": "rogue",
+      "imageSrc": "/images/classes/rogue.jpg",
+      "name": "Плут"
+    },
+    {
+      "id": "runecarver",
+      "imageSrc": "/images/classes/runecarver.jpg",
+      "name": "Резчик рун"
+    },
+    {
+      "id": "ranger",
+      "imageSrc": "/images/classes/ranger.jpg",
+      "name": "Следопыт"
+    },
+    {
+      "id": "sorcerer",
+      "imageSrc": "/images/classes/sorcerer.jpg",
+      "name": "Чародей"
+    }
+  ]
+}
