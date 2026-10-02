@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { RaceDtm } from '@/models'
 
@@ -10,7 +11,7 @@ type RaceCardProps = {
 
 export function RaceCard({ raceData }: RaceCardProps) {
   return (
-    <div className={styles.card}>
+    <Link href={`/races/${raceData.id}`} className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={raceData.imageSrc}
@@ -24,6 +25,6 @@ export function RaceCard({ raceData }: RaceCardProps) {
       <div className={styles.content}>
         <h2 className={styles.title}>{raceData.name}</h2>
       </div>
-    </div>
+    </Link>
   )
 }
