@@ -3,77 +3,92 @@
     {
       "id": "artificer",
       "imageSrc": "/images/classes/artificer.jpg",
-      "name": "Артефактор"
+      "name": "Артефактор",
+      "title": "Artificer"
     },
     {
       "id": "bard",
       "imageSrc": "/images/classes/bard.jpg",
-      "name": "Бард"
+      "name": "Бард",
+      "title": "Bard"
     },
     {
       "id": "barbarian",
       "imageSrc": "/images/classes/barbarian.jpg",
-      "name": "Варвар"
+      "name": "Варвар",
+      "title": "Barbarian"
     },
     {
       "id": "fighter",
       "imageSrc": "/images/classes/fighter.jpg",
-      "name": "Воин"
+      "name": "Воин",
+      "title": "Fighter"
     },
     {
       "id": "wizard",
       "imageSrc": "/images/classes/wizard.jpg",
-      "name": "Волшебник"
+      "name": "Волшебник",
+      "title": "Wizard"
     },
     {
       "id": "juggernaut",
       "imageSrc": "/images/classes/juggernaut.jpg",
-      "name": "Джаггернаут"
+      "name": "Джаггернаут",
+      "title": "Juggernaut"
     },
     {
       "id": "druid",
       "imageSrc": "/images/classes/druid.jpg",
-      "name": "Друид"
+      "name": "Друид",
+      "title": "Druid"
     },
     {
       "id": "cleric",
       "imageSrc": "/images/classes/cleric.jpg",
-      "name": "Жрец"
+      "name": "Жрец",
+      "title": "Cleric"
     },
     {
       "id": "warlock",
       "imageSrc": "/images/classes/warlock.jpg",
-      "name": "Колдун"
+      "name": "Колдун",
+      "title": "Warlock"
     },
     {
       "id": "monk",
       "imageSrc": "/images/classes/monk.jpg",
-      "name": "Монах"
+      "name": "Монах",
+      "title": "Monk"
     },
     {
       "id": "paladin",
       "imageSrc": "/images/classes/paladin.jpg",
-      "name": "Паладин"
+      "name": "Паладин",
+      "title": "Paladin"
     },
     {
       "id": "rogue",
       "imageSrc": "/images/classes/rogue.jpg",
-      "name": "Плут"
+      "name": "Плут",
+      "title": "Rogue"
     },
     {
       "id": "runecarver",
       "imageSrc": "/images/classes/runecarver.jpg",
-      "name": "Резчик рун"
+      "name": "Резчик рун",
+      "title": "Runecarver"
     },
     {
       "id": "ranger",
       "imageSrc": "/images/classes/ranger.jpg",
-      "name": "Следопыт"
+      "name": "Следопыт",
+      "title": "Ranger"
     },
     {
       "id": "sorcerer",
       "imageSrc": "/images/classes/sorcerer.jpg",
-      "name": "Чародей"
+      "name": "Чародей",
+      "title": "Sorcerer"
     }
   ]
 }

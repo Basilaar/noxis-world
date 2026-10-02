@@ -1,7 +1,8 @@
 export interface ClassApi {
   id: string,
   name: string,
-  imageSrc: string
+  imageSrc: string,
+  title: string
 }
 
 export type GetClassResponse = {

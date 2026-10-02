@@ -1,13 +1,13 @@
 import { create } from 'zustand'
 
+import { getClassListClient } from '@/api/classes'
 import { ClassDtm } from '@/models'
-
-import classesDataJson from './classes.json'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 type ClassesState = {
   classes: ClassDtm[]
+  selectedClassId: string | null
 }
 
 type ClassesActions = {
@@ -16,12 +16,17 @@ type ClassesActions = {
 
 export type ClassesStore = ClassesState & ClassesActions
 
+
 // ─── Store ───────────────────────────────────────────────────────────────────
 
 export const useClassesStore = create<ClassesStore>((set) => ({
   classes: [],
+  selectedClassId: null,
 
   fetchClasses: async () => {
-    set({ classes: classesDataJson.data })
+    const classResponse = await getClassListClient()
+    // TODO: добавить обработку ошибки
+  
+    set({ classes: classResponse })
   },
 }))
