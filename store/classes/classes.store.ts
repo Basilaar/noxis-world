@@ -22,6 +22,6 @@ export const useClassesStore = create<ClassesStore>((set) => ({
   classes: [],
 
   fetchClasses: async () => {
-    set({classes: classesDataJson.data})
-  }
+    set({ classes: classesDataJson.data })
+  },
 }))

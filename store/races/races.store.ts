@@ -1,8 +1,7 @@
 import { create } from 'zustand'
 
+import { getRacesListClient } from '@/api/races'
 import type { RaceDtm } from '@/models'
-
-import racesDataJson from './races.json'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -25,6 +24,8 @@ export const useRacesStore = create<RacesStore>((set) => ({
   selectedRaceId: null,
 
   fetchRaces: async () => {
-    set({races: racesDataJson.data})
-  }
+    const raceResponse = await getRacesListClient()
+
+    set({ races: raceResponse })
+  },
 }))

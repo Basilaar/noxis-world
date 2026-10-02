@@ -16,14 +16,12 @@ export function ClassesList() {
 
   return (
     <>
-      {
-        classes.map((classData) => (
-          <ClassCard
-            key={classData.id}
-            classData={classData}
-          />
-        ))
-      }
+      {classes.map((classData) => (
+        <ClassCard
+          key={classData.id}
+          classData={classData}
+        />
+      ))}
     </>
   )
 }

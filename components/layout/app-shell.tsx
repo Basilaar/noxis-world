@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+
 import { Background } from './background'
 import { Navbar } from './navbar'
 import { MobileNav } from './mobile-nav'
