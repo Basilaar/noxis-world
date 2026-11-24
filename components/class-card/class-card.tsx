@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { ClassDtm } from '@/models'
 
@@ -10,7 +11,7 @@ type ClassCardProps = {
 
 export function ClassCard({ classData }: ClassCardProps) {
   return (
-    <div className={styles.card}>
+    <Link href={`/classes/${classData.id}`} className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={classData.imageSrc}
@@ -25,6 +26,6 @@ export function ClassCard({ classData }: ClassCardProps) {
         <h2 className={styles.title}>{classData.title}</h2>
         <p className={styles.description}>{classData.subTitle}</p>
       </div>
-    </div>
+    </Link>
   )
 }
