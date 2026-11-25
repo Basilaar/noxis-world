@@ -10,33 +10,34 @@ import {
   ExternalLink,
   ShieldCheck,
 } from 'lucide-react'
+import {
+  SubClasses,
+  ClassLevelData,
+  ClassDescription
+} from '../../lib/classes-data'
+
+import { SubClassesList } from '../subclass-list'
+import { ClassLevelsTable } from '../class-levels-table'
+
 
 import styles from './class-detail.module.scss'
 
-// export type RaceTrait = {
-//   title: string
-//   description: string
-// }
-
-// export type RaceDetailProps = {
-//   name: string
-//   type?: string
-//   imageSrc: string
-//   imageAlt?: string
-//   height?: string
-//   lifespan?: string
-//   habitats?: string[]
-//   description: ReactNode
-//   traits?: RaceTrait[]
-//   galleryUrl?: string
-// }
 export type ClassDetailProps = {
-  name : string
+  name : string,
+  title: string,
+  subclasses: SubClasses[];
+  levels: Record<number, ClassLevelData>;
+  features: ClassDescription[];
 }
 
 export function ClassDetail({
   name,
+  title,
+  subclasses,
+  levels,
+  features
 }: ClassDetailProps) {
+
   return (
     <article className={styles.container}>
       <div>
@@ -45,7 +46,18 @@ export function ClassDetail({
           <span>Все классы</span>
         </Link>
       </div>
-       <span>{name}</span>
+
+       <header className={styles.header}>
+        <div className={styles.eyebrow}>
+          <span className={styles.eyebrowDot} />
+          <span>{title}</span>
+        </div>
+        <h1 className={styles.title}>{name}</h1>
+      </header>
+      <SubClassesList subClassData={subclasses} />
+      
+      <ClassLevelsTable levels={levels} />
+
     </article>
   )
 }

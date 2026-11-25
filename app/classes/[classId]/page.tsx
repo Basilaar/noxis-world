@@ -38,6 +38,10 @@ export default async function ClassPage({ params }: ClassPageProps) {
   return (
     <ClassDetail
       name={classData.name}
+      title={classData.title}
+      subclasses={classData.subclasses}
+      levels={classData.levels}
+      features={classData.features}
     />
   )
 }
