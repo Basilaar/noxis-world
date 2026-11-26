@@ -1,0 +1,190 @@
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--accent-strong);
+  margin-bottom: 16px;
+
+  @include up($bp-sm) {
+    font-size: 1.3rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  @include arcane-glass;
+
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+
+  scroll-margin-top: 100px;
+
+  animation: rise 0.4s ease both;
+
+  @include up($bp-sm) {
+    padding: 18px;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.level {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--accent-strong);
+  margin: 0;
+
+  @include up($bp-sm) {
+    font-size: 1.1rem;
+  }
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text-primary, var(--text-muted));
+  overflow-wrap: anywhere;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.detail {
+  padding: 10px 12px;
+  border-left: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 0 8px 8px 0;
+}
+
+.detailTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent-strong);
+  margin: 0 0 6px;
+}
+
+.detailDescription {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.spells {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.spellsHeading {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--accent-strong);
+  margin: 0 0 12px;
+}
+
+.spellGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.spellLevel {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--text-primary, var(--text-muted));
+}
+
+.spellList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.spell {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.additional {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+
+  p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+
+  strong {
+    color: var(--accent-strong);
+  }
+}

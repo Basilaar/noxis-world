@@ -18,6 +18,7 @@ import {
 
 import { SubClassesList } from '../subclass-list'
 import { ClassLevelsTable } from '../class-levels-table'
+import { ClassFeatures } from '../class-features'
 
 
 import styles from './class-detail.module.scss'
@@ -55,8 +56,10 @@ export function ClassDetail({
         <h1 className={styles.title}>{name}</h1>
       </header>
       <SubClassesList subClassData={subclasses} />
-      
+
       <ClassLevelsTable levels={levels} />
+
+      <ClassFeatures features={features} />
 
     </article>
   )
