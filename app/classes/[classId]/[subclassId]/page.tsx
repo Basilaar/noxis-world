@@ -18,7 +18,8 @@ export async function generateStaticParams() {
     const classData = getClassById(classId)
 
     if (!classData) return []
-
+    console.log(classId)
+    console.log(classData.subclasses)
     return classData.subclasses.map((subclass) => ({
       classId,
       subclassId: subclass.id,
@@ -30,27 +31,18 @@ export async function generateMetadata({
   params,
 }: SubclassPageProps): Promise<Metadata> {
   const { classId, subclassId } = await params
+  console.log(classId)
+  console.log(subclassId)
+  const subClassData = getClassById(subclassId)
 
-  const classData = getClassById(classId)
-
-  if (!classData) {
-    return {
-      title: 'Класс не найден',
-    }
-  }
-
-  const subclass = classData.subclasses.find(
-    (subclass) => subclass.id === subclassId
-  )
-
-  if (!subclass) {
+  if (!subClassData) {
     return {
       title: 'Подкласс не найден',
     }
   }
 
   return {
-    title: subclass.title,
+    title: subClassData.title,
   }
 }
 
@@ -58,28 +50,21 @@ export default async function SubclassPage({
   params,
 }: SubclassPageProps) {
   const { classId, subclassId } = await params
+  console.log(classId)
+  console.log(subclassId)
+  const subClassData = getClassById(subclassId)
 
-  const classData = getClassById(classId)
-
-  if (!classData) {
-    notFound()
-  }
-
-  const subclass = classData.subclasses.find(
-    (subclass) => subclass.id === subclassId
-  )
-
-  if (!subclass) {
+  if (!subClassData) {
     notFound()
   }
 
   return (
     <SubclassDetail
-      name={classData.name}
-      title={classData.title}
-      levels={classData.levels}
-      features={classData.features}
-      subclasses={classData.subclasses}
+      name={subClassData.name}
+      title={subClassData.title}
+      levels={subClassData.levels}
+      features={subClassData.features}
+      subclasses={subClassData.subclasses}
     />
   )
 }
