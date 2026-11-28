@@ -71,6 +71,9 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
                 id: "none", title: "Без подкласса", mainId: 'artificer', mainTitle: "Артефактор",            
             },
             {
+                id: "alchemist", title: "Алхимик", mainId: 'artificer', mainTitle: "Артефактор",  
+            },
+            {
                 id: "artillerist", title: "Артиллерист", mainId: 'artificer', mainTitle: "Артефактор",  
             },
             {
@@ -91,7 +94,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
                 proficiencyBonus: 2,
                 features: [
                     { name: "Сотворение заклинаний", linking: "spellcasting" },
-                    { name: "Магия вещей", linking: "tinkers-magic" }
+                    { name: "Магия вещей", linking: "magic_tinkering" }
                 ],
                 knownSchematics: null,
                 magicItems: null,
@@ -102,7 +105,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             2: {
                 proficiencyBonus: 2,
                 features: [
-                    { name: "Реплики магических предметов", linking: "replicate-magic-item" }
+                    { name: "Реплики магических предметов", linking: "replicate_magic_item" }
                 ],
                 knownSchematics: 4,
                 magicItems: 2,
@@ -113,7 +116,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             3: {
                 proficiencyBonus: 2,
                 features: [
-                    { name: "Подкласс Артефактора", linking: "artificer-subclass" }
+                    { name: "Подкласс Артефактора", linking: "artificer_subclass" }
                 ],
                 knownSchematics: 4,
                 magicItems: 2,
@@ -124,7 +127,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             4: {
                 proficiencyBonus: 2,
                 features: [
-                    { name: "Увеличение характеристик", linking: "ASI-4" }
+                    { name: "Увеличение характеристик", linking: "ability_score_improvement_4" }
                 ],
                 knownSchematics: 4,
                 magicItems: 2,
@@ -135,7 +138,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             5: {
                 proficiencyBonus: 3,
                 features: [
-                    { name: "Умение подкласса", linking: "subclass-5" }
+                    { name: "Умение подкласса", linking: "subclass_feature_5" }
                 ],
                 knownSchematics: 4,
                 magicItems: 2,
@@ -146,7 +149,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             6: {
                 proficiencyBonus: 3,
                 features: [
-                    { name: "Магический мастеровой", linking: "magic-item-tinker" }
+                    { name: "Магический мастеровой", linking: "magic_item_adept" }
                 ],
                 knownSchematics: 5,
                 magicItems: 3,
@@ -157,7 +160,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             7: {
                 proficiencyBonus: 3,
                 features: [
-                    { name: "Проблеск гениальности", linking: "flash-of-genius" }
+                    { name: "Проблеск гениальности", linking: "flash_of_genius" }
                 ],
                 knownSchematics: 5,
                 magicItems: 3,
@@ -168,7 +171,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             8: {
                 proficiencyBonus: 3,
                 features: [
-                    { name: "Увеличение характеристик", linking: "ASI-8" }
+                    { name: "Увеличение характеристик", linking: "ability_score_improvement_8" }
                 ],
                 knownSchematics: 5,
                 magicItems: 3,
@@ -179,7 +182,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             9: {
                 proficiencyBonus: 4,
                 features: [
-                    { name: "Умение подкласса", linking: "subclass-9" }
+                    { name: "Умение подкласса", linking: "subclass_feature_9" }
                 ],
                 knownSchematics: 5,
                 magicItems: 3,
@@ -190,7 +193,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             10: {
                 proficiencyBonus: 4,
                 features: [
-                    { name: "Искусник магических предметов", linking: "magic-item-adept" }
+                    { name: "Искусник магических предметов", linking: "magic_item_savant" }
                 ],
                 knownSchematics: 6,
                 magicItems: 4,
@@ -201,7 +204,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             11: {
                 proficiencyBonus: 4,
                 features: [
-                    { name: "Хранящий заклинания предмет", linking: "spell-storing-item" }
+                    { name: "Хранящий заклинания предмет", linking: "spell_storing_item" }
                 ],
                 knownSchematics: 6,
                 magicItems: 4,
@@ -212,7 +215,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             12: {
                 proficiencyBonus: 4,
                 features: [
-                    { name: "Увеличение характеристик", linking: "ASI-12" }
+                    { name: "Увеличение характеристик", linking: "ability_score_improvement_12" }
                 ],
                 knownSchematics: 6,
                 magicItems: 4,
@@ -232,7 +235,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             14: {
                 proficiencyBonus: 5,
                 features: [
-                    { name: "Изобретательность", linking: "advanced-artifice" }
+                    { name: "Изобретательность", linking: "magic_item_master" }
                 ],
                 knownSchematics: 7,
                 magicItems: 5,
@@ -243,7 +246,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             15: {
                 proficiencyBonus: 5,
                 features: [
-                    { name: "Умение подкласса", linking: "subclass-15" }
+                    { name: "Умение подкласса", linking: "subclass_feature_15" }
                 ],
                 knownSchematics: 7,
                 magicItems: 5,
@@ -254,7 +257,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             16: {
                 proficiencyBonus: 5,
                 features: [
-                    { name: "Увеличение характеристик", linking: "ASI-16" }
+                    { name: "Увеличение характеристик", linking: "ability_score_improvement_16" }
                 ],
                 knownSchematics: 7,
                 magicItems: 5,
@@ -274,7 +277,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             18: {
                 proficiencyBonus: 6,
                 features: [
-                    { name: "Мастер магических предметов", linking: "magic-item-master" }
+                    { name: "Мастер магических предметов", linking: "magic_item_master_18" }
                 ],
                 knownSchematics: 8,
                 magicItems: 6,
@@ -285,7 +288,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             19: {
                 proficiencyBonus: 6,
                 features: [
-                    { name: "Эпический дар", linking: "epic-boon" }
+                    { name: "Эпический дар", linking: "epic_boon" }
                 ],
                 knownSchematics: 8,
                 magicItems: 6,
@@ -296,7 +299,7 @@ export const CLASSES_DATA: Record<string, ClassDetailData> = {
             20: {
                 proficiencyBonus: 6,
                 features: [
-                    { name: "Душа творения", linking: "soul-of-artifice" }
+                    { name: "Душа творения", linking: "soul_of_artifice" }
                 ],
                 knownSchematics: 8,
                 magicItems: 6,
